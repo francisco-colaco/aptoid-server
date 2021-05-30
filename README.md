@@ -1,6 +1,6 @@
 # READ-R site.
 
-This is a chanllenge for Aptoid (hopefully not reading the code). Built from
+This is a challenge for Aptoid (hopefully not reading the code). Built from
 scratch, it offers a way to store, delete, list and retrieve objects (files) for
 Amazon S3 Buckets.
 
