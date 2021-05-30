@@ -1,0 +1,26 @@
+{
+  "name": "pdf-server",
+  "version": "1.0.0",
+  "author": "Francisco Miguel Colaço",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha test.js --exit",
+    "start": "nodemon server,js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "*",
+    "chai": "*",
+    "chai-http": "*",
+    "mocha": "*"
+  },
+  "dependencies": {
+    "aws-sdk": "*",
+    "cookie-parser": "*",
+    "express": "*",
+    "express-fileupload": "*",
+    "multer": "*",
+    "pug": "*"
+  }
+}

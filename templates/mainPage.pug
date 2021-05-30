@@ -1,0 +1,62 @@
+extends page.pug
+
+
+block style
+  style.
+    div.icons {
+      display: flex;
+      padding: 1ex;
+    }
+
+    div.icon {
+       width: 3cm;
+       text-align: center;
+       box-shadow: 2px 2px 6px gray;
+    }
+
+    div.icon img {
+       width: 3cm;
+    }
+
+    div.icons a {
+       display: block;
+       color: inherit;
+       margin: 1ex;
+    }
+
+
+block navigation
+  a(href="/") PDF Files
+
+
+block content
+  h1 My READ-R
+
+  if error
+    p.error= error
+
+  form.upload(action="/files/upload", method="post", enctype="multipart/form-data")
+    input#file(type="file", name="pdf", accept="application/pdf")
+    input(type="submit", value="Upload")
+
+  table.listing
+    colgroup
+      col
+      col(style="width: 5mm; color: darkred;")
+      col(style="width: 5mm; color: darkred;")
+    thead
+      tr
+        th PDF File
+        th(colspan="2")
+    tbody
+      each f in files
+        tr
+          td
+            a(href="/files/" + f, title="Open document " + f, target='_blank')= f
+          td
+            a.short-button(href="/files/" + f, title="Open document " + f, target='_blank')
+              img(src='/view.svg', style="height: 1.4rem;")
+          td
+            a.short-button(href='/files/delete/' + f, title="Remove document")
+              img(src='/delete.svg', style="height: 1rem;")
+

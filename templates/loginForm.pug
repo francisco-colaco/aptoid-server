@@ -1,0 +1,11 @@
+form#login-form(action="/users", method="post", onsubmit="return false")
+  div
+    label(for='username') Username
+  div
+    input#username(type='text', name='username')
+  div
+    label(for='password') Password
+  div
+    input#password(type='password', name='password')
+  div.action-area
+    button.submit(onclick="this.form.submit();") Login

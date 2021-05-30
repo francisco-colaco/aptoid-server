@@ -1,0 +1,46 @@
+extends page.pug
+
+
+block style
+  style.
+    div.content {
+      width: 100vw;
+    }
+
+    form#login-form {
+      width: clamp(6cm, 67%, 10cm);
+      padding: 8mm;
+      margin: 2cm auto auto;
+      box-shadow: 0px 0px 4px black;
+      text-align: center;
+    }
+
+    label {
+      display: inline-block;
+      font-size: 85%;
+      margin-right: .5ex;
+    }
+
+    input {
+      border: none;
+      border-bottom: solid 1px lightgray;
+      margin-bottom: 2mm;
+    }
+
+    p.error {
+      color: darkred;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 1cm;
+    }
+
+
+block navigation
+  a(href="/") PDF Files &gt; Login
+
+
+block content
+  include loginForm.pug
+
+  if error
+    p.error Invalid credentials. Please retry.

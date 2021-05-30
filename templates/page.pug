@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title READ-R
+    link(rel='stylesheet', href='/website.css')
+    block style
+  body
+    header
+      div.container
+        img(src='/logo.svg', style='height: 32px')
+        div(class="title") READ-R
+        div(style="flex-grow: 1")
+        div(style="margin-right: .75ex")
+          if user
+            a.button(href="/users/logout") Log out
+    div.navigation
+      div.container
+        block navigation
+
+    div.content
+      div.container
+        block content
+
+    block scripts
