@@ -14,37 +14,39 @@ at the client.
 
 The server has four modules:
 
-+ auth.js :: handles authentication and authorisation.
++ auth.js : handles authentication and authorisation.
 
-+ bucket.js :: lists buckets, uploads, deletes and retrieves objects.  Ensures
++ bucket.js : lists buckets, uploads, deletes and retrieves objects.  Ensures
      the existence of the application bucket.
      
-+ routes.js :: establishes routes and actions for the applicational server.
++ routes.js : establishes routes and actions for the applicational server.
 
-+ server.js :: controls the server life cycle.
++ server.js : controls the server life cycle.
 
-The =pug= templates are in their own directory, =templates/=.
+The `pug` templates are in their own directory, `templates/`.
 
-Some resource files live in =static/=.
+Some resource files live in `static/`.
 
 test.js defines a test suite to cover some of the modules.
 
 
-## Installation instructions
+## Setting up and running
 
-Use =npm= to install all dependencies:
+### Installation instructions
+
+Use `npm` to install all dependencies:
 
 ```bash
 npm install
 ```
 
-## Start the server
+### Start the server
 
 ```bash
 npm start
 ```
 
-## Run the test suite
+### Run the test suite
 
 ```bash
 npm test
