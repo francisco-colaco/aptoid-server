@@ -52,3 +52,7 @@ npm start
 npm test
 ```
 
+## Viewing the site
+
+Point a browser to http://localhost:8000.
+
