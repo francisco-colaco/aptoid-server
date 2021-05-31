@@ -15,11 +15,7 @@ const BUCKET_NAME = 'apt-pdf-browser';
 
 
 /** The configuration for the AWS module. */
-AWS.config.update({
-  region: 'eu-west-3',
-  accessKeyId: 'AKIA5SMOUIOQL35H45MZ',
-  secretAccessKey: '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',
-});
+AWS.config.update({});
 
 
 /** The S3 storage. */

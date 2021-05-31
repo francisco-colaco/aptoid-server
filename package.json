@@ -5,8 +5,8 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "test": "mocha test.js --exit",
-    "start": "nodemon server,js"
+    "start": "AWS_SDK_LOAD_CONFIG=1 nodemon server.js",
+    "test": "AWS_SDK_LOAD_CONFIG=1 mocha test.js --exit"
   },
   "type": "module",
   "devDependencies": {
